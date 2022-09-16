@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  base: '/deploy-pokemon-vue/',
+  publicPath: process.env.NODE_ENV === "production" ? "/deploy-pokemon/" : "/",
   transpileDependencies: true
 })
